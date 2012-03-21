@@ -38,6 +38,7 @@
 		FC3037E6151A0BC7004F2E34 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3037E5151A0BC7004F2E34 /* MainViewController.m */; };
 		FC3037E8151A0BC7004F2E34 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3037E7151A0BC7004F2E34 /* MainViewController.xib */; };
 		FC3037EC151A0BC7004F2E34 /* verify.sh in Resources */ = {isa = PBXBuildFile; fileRef = FC3037EB151A0BC7004F2E34 /* verify.sh */; };
+		FC3037F3151A0C58004F2E34 /* www in Resources */ = {isa = PBXBuildFile; fileRef = FC3037F2151A0C58004F2E34 /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,10 +56,10 @@
 		FC3037AE151A0BC6004F2E34 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FC3037B0151A0BC6004F2E34 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		FC3037B2151A0BC6004F2E34 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		FC3037B6151A0BC6004F2E34 /* COMP5527-Project-Info.plist */ = {isa = PBXFileReference; path = "COMP5527-Project-Info.plist"; sourceTree = "<group>"; };
+		FC3037B6151A0BC6004F2E34 /* COMP5527-Project-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "COMP5527-Project-Info.plist"; sourceTree = "<group>"; };
 		FC3037B8151A0BC6004F2E34 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FC3037BA151A0BC6004F2E34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FC3037BC151A0BC6004F2E34 /* COMP5527-Project-Prefix.pch */ = {isa = PBXFileReference; path = "COMP5527-Project-Prefix.pch"; sourceTree = "<group>"; };
+		FC3037BC151A0BC6004F2E34 /* COMP5527-Project-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "COMP5527-Project-Prefix.pch"; sourceTree = "<group>"; };
 		FC3037BD151A0BC6004F2E34 /* Cordova.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cordova.framework; path = /Users/Shared/Cordova/Frameworks/Cordova.framework; sourceTree = "<absolute>"; };
 		FC3037C2151A0BC6004F2E34 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FC3037C6151A0BC6004F2E34 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -71,13 +72,14 @@
 		FC3037DA151A0BC6004F2E34 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/splash/Default@2x.png"; sourceTree = "<group>"; };
 		FC3037DC151A0BC7004F2E34 /* Capture.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Capture.bundle; path = Resources/Capture.bundle; sourceTree = "<group>"; };
 		FC3037DE151A0BC7004F2E34 /* Cordova.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Cordova.plist; sourceTree = "<group>"; };
-		FC3037E1151A0BC7004F2E34 /* AppDelegate.h */ = {isa = PBXFileReference; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		FC3037E1151A0BC7004F2E34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		FC3037E2151A0BC7004F2E34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
-		FC3037E4151A0BC7004F2E34 /* MainViewController.h */ = {isa = PBXFileReference; name = MainViewController.h; path = Classes/MainViewController.h; sourceTree = "<group>"; };
+		FC3037E4151A0BC7004F2E34 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Classes/MainViewController.h; sourceTree = "<group>"; };
 		FC3037E5151A0BC7004F2E34 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Classes/MainViewController.m; sourceTree = "<group>"; };
 		FC3037E7151A0BC7004F2E34 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainViewController.xib; path = Classes/MainViewController.xib; sourceTree = "<group>"; };
-		FC3037EA151A0BC7004F2E34 /* README */ = {isa = PBXFileReference; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		FC3037EA151A0BC7004F2E34 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		FC3037EB151A0BC7004F2E34 /* verify.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = verify.sh; sourceTree = "<group>"; };
+		FC3037F2151A0C58004F2E34 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		FC303788151A0BC6004F2E34 = {
 			isa = PBXGroup;
 			children = (
+				FC3037F2151A0C58004F2E34 /* www */,
 				FC3037B4151A0BC6004F2E34 /* COMP5527-Project */,
 				FC303799151A0BC6004F2E34 /* Frameworks */,
 				FC303797151A0BC6004F2E34 /* Products */,
@@ -329,6 +332,7 @@
 				FC3037DF151A0BC7004F2E34 /* Cordova.plist in Resources */,
 				FC3037E8151A0BC7004F2E34 /* MainViewController.xib in Resources */,
 				FC3037EC151A0BC7004F2E34 /* verify.sh in Resources */,
+				FC3037F3151A0C58004F2E34 /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
