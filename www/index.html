@@ -1,29 +1,291 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title></title>
+  <title>Mobile Healthcare</title>
   
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
 	<meta charset="utf-8">
 
-	<style type="text/css" media="screen">@import "jQTouch/themes/css/jqtouch.css";</style>
+	<style type="text/css" media="screen">@import "js/jQTouch/themes/css/jqtouch.css";</style>
         
-	<script src="jQTouch/src/lib/zepto.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="jQTouch/src/jqtouch.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jQTouch/src/lib/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jQTouch/src/jqtouch.js" type="text/javascript" charset="utf-8"></script>
     <!-- Uncomment the following two lines (and comment out the previous two) to use jQuery instead of Zepto. -->
-    <!-- <script src="jQTouch/src/lib/jquery-1.7.min.js" type="application/x-javascript" charset="utf-8"></script> -->
-    <!-- <script src="jQTouch/src/jqtouch-jquery.js" type="application/x-javascript" charset="utf-8"></script> -->
+    <!-- <script src="js/jQTouch/src/lib/jquery-1.7.min.js" type="application/x-javascript" charset="utf-8"></script> -->
+    <!-- <script src="js/jQTouch/src/jqtouch-jquery.js" type="application/x-javascript" charset="utf-8"></script> -->
 
-
+	<link rel="stylesheet" media="screen" href="css/screen.css" type="text/css" />
 	<!-- iPad/iPhone specific css below, add after your main css >
-	<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
-	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
+	<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="css/ipad.css" type="text/css" />		
+	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="css/iphone.css" type="text/css" />		
 	-->
 	<!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
-	<script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
-    <script type="text/javascript" charset="utf-8" src="init.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/cordova-1.5.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/init.js"></script>
   </head>
   <body onload="onBodyLoad()">
-	
+		<div id="jqt">
+          <div id="about" class="selectable">
+                  <p><img src="img/logo.png" /></p>
+                  <p><strong>jQTouch</strong><br>Version 1.0 beta<br>
+                      <a href="http://www.davidkaneda.com">By David Kaneda</a></p>
+                  <p><em>Create powerful mobile apps with<br> just HTML, CSS, and jQuery.</em></p>
+                  <p>
+                      <a target="_blank" href="http://twitter.com/jqtouch">@jQTouch on Twitter</a>
+                  </p>
+                  <p><br><br><a href="#" class="grayButton goback">Close</a></p>
+          </div>
+          <div id="animations">
+              <div class="toolbar">
+                  <h1>Animations</h1>
+                  <a class="back" href="#">Home</a>
+              </div>
+              <div class="scroll">
+                  <h2>Most Popular</h2>
+                  <ul class="rounded">
+                      <li><a href="#animdemo">Slide</a></li>
+                      <li><a href="#animdemo" class="slideup">Slide Up</a></li>
+                      <li><a href="#animdemo" class="dissolve">Dissolve</a></li>
+                      <li><a href="#animdemo" class="pop">Pop</a></li>
+                  </ul>
+                  <h2>3d Transitions</h2>
+                  <ul class="rounded">
+                      <li><a href="#animdemo" class="flipright">Flip right</a></li>
+                      <li><a href="#animdemo" class="flipleft">Flip left</a></li>
+                      <li><a href="#animdemo" class="cube">Cube</a></li>
+                      <li><a href="#animdemo" class="swap">Swap</a></li>
+                  </ul>
+              </div>
+              <div class="info">
+                  Custom animations are also <a target="_blank" href="http://code.google.com/p/jqtouch/wiki/Animations">easy to write</a>. <br>View the source in <code>demos/customanimation</code> to see how.
+              </div>
+          </div>
+          <div id="animations2">
+              <div class="toolbar">
+                  <h1>Animations</h1>
+                  <a href="#" class="back">Animations</a>
+              </div>
+              <div class="scroll">
+                  <ul class="rounded">
+                  </ul>
+              </div>
+          </div>
+          <div id="animdemo">
+              <div style="font-size: 1.5em; text-align: center; margin: 160px 0 90px; font-family: Marker felt;">
+                  Pretty smooth, eh?            
+              </div>
+              <a style="margin-bottom: 120px;color:rgba(0,0,0,.9)" href="#" class="whiteButton goback">Go back</a>
+          </div>
+          <div id="buttons">
+              <div class="toolbar">
+                  <h1>Buttons!</h1>
+                  <a href="#" class="back">Home</a>
+              </div>
+              <div style="margin-top: 10px;" class="scroll">
+                  <a href="#" class="whiteButton">White</a>
+                  <br>
+                  <a href="#" class="grayButton">Gray</a>
+                  <br>
+                  <a href="#" class="redButton">Red</a>
+                  <br>
+                  <a href="#" class="greenButton">Green</a>
+              </div>
+          </div>
+          <div id="callbacks">
+              <div class="toolbar">
+                  <h1>Events</h1>
+                  <a class="back" href="#home">Home</a>
+              </div>
+              <div class="scroll">
+                  <ul class="rounded">
+                      <li id="orient">Orientation: <strong>portrait</strong></li>
+                      <li><a href="#pageevents" data-custom="WOOT!">Page events</a></li>
+                      <li><a href="#" id="swipeme">Swipe me!</a></li>
+                      <li><a href="#" id="tapme">Tap me!</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div id="demos">
+              <div class="toolbar">
+                  <h1>Demos</h1>
+                  <a class="back" href="#home">Home</a>
+              </div>
+              <div class="scroll">
+
+                  <ul class="rounded">
+                      <li class="forward"><a target="_blank" href="../todo/">To-Do app</a></li>
+                      <li class="forward"><a target="_blank" href="../clock/">Clock app</a></li>
+                  </ul>
+              </div>
+              <div class="info">
+                   These apps open in a new window. Don&#8217;t forget to save them to your home screen to enable full-screen mode.
+               </div>
+          </div>
+          <div id="edge">
+              <div class="toolbar">
+                  <h1>Edge to Edge</h1>
+                  <a href="#" class="back">Back</a>
+              </div>
+              <ul class="edgetoedge scroll">
+                  <li class="sep">F</li>
+                  <li><a href="#">Flintstone, <em>Fred</em> <small>Label</small></a></li>
+                  <li><a href="#">Flintstone, <em>Pebble</em> <small class="counter">42</small></a></li>
+                  <li><a href="#">Flintstone, <em>Wilma</em></a></li>
+                  <li class="sep">J</li>
+                  <li class="arrow"><a href="#">Jetson, <em>Elroy</em> <small>Label</small></a></li>
+                  <li class="arrow"><a href="#">Jetson, <em>George</em> <small class="counter">42</small></a></li>
+                  <li class="arrow"><a href="#">Jetson, <em>Jane</em></a></li>
+                  <li class="arrow"><a href="#">Jetson, <em>Judy</em></a></li>
+                  <li class="sep">R</li>
+                  <li class="forward"><a href="#">Rubble, <em>Bambam</em> <small>Label</small></a></li>
+                  <li class="forward"><a href="#">Rubble, <em>Barney</em> <small class="counter">42</small></a></li>
+                  <li class="forward"><a href="#">Rubble, <em>Betty</em></a></li>
+              </ul>
+          </div>
+          <div id="themes">
+              <div class="toolbar">
+                  <h1>Themes</h1>
+                  <a href="#" class="back">Back</a>
+              </div>
+              <ul class="rounded">
+              </ul>
+          </div>
+          <div id="extensions">
+              <div class="toolbar">
+                  <h1>Extensions</h1>
+                  <a class="back" href="#home">Home</a>
+              </div>
+              <div class="scroll">
+                  <div class="info">
+                      These apps open in a new window. Don&#8217;t forget to save them to your home screen to enable full-screen mode.
+                  </div>
+                  <ul class="rounded">
+                      <li class="forward"><a target="_blank" href="../ext_location/index.html">Geo Location</a></li>
+                      <li class="forward"><a target="_blank" href="../ext_offline/index.html">Offline Utility</a></li>
+                      <li class="forward"><a target="_blank" href="../ext_floaty/index.html">Floaty Bar</a></li>
+                      <li class="forward"><a target="_blank" href="../ext_autotitles/index.html">Auto Titles</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div id="forms">
+              <div class="toolbar">
+                  <h1>Forms</h1>
+                  <a href="#" class="back">Back</a>
+              </div>
+              <form class="scroll">
+                  <ul class="edit rounded">
+                      <li><input type="text" name="name" placeholder="Text" id="some_name" /></li>
+                      <li><input type="search" name="search" placeholder="Search" id="some_name" /></li>
+                      <li><input type="tel" name="phone" placeholder="Phone" id="some_name"  /></li>
+                      <li><input type="number" name="zip" placeholder="Numbers" id="some_name" /></li>                    
+                      <li><input type="email" name="email" placeholder="Email" id="some_name" /></li>
+                      <li><input type="url" name="url" placeholder="Url" id="some_name" /></li>
+                      <li><textarea placeholder="Textarea" ></textarea></li>
+                      <li>Sample Toggle <span class="toggle"><input type="checkbox" /></span></li>
+                      <li class="arrow">
+                          <select id="lol">
+                              <optgroup label="Swedish Cars">
+                                  <option value ="volvo">Volvo</option>
+                                  <option value ="saab">Saab</option>
+                              </optgroup>
+                              <optgroup label="German Cars">
+                                  <option value ="mercedes">Mercedes</option>
+                                  <option value ="audi">Audi</option>
+                              </optgroup>
+                          </select>
+                      </li>
+                      <li><input type="password" name="some_name" value="iphonedelcopon" id="some_name" /></li>
+                      <li><input type="checkbox" name="food" value="punch" title="Punch" /></li>
+                      <li><input type="checkbox" name="food" value="pie" checked="checked" title="Pie" /></li>
+                      <li><input type="radio" name="bag" value="paper" title="Paper" /></li>
+                      <li><input type="radio" name="bag" value="plastic" title="Plastic" /></li>
+                  </ul>
+              </form>
+          </div>
+          <div id="home" class="current">
+              <div class="toolbar">
+                  <h1>jQTouch</h1>
+                  <a class="button slideup" id="infoButton" href="#about">About</a>
+              </div>
+              <div class="scroll">
+                  <ul class="rounded">
+                      <li class="arrow"><a href="#ui">User Interface <small class="counter">5</small></a> </li>
+                      <li class="arrow"><a href="#animations">Animations <small class="counter">7</small></a></li>
+                      <li class="arrow"><a href="#callbacks">Events <small class="counter">4</small></a></li>
+                      <li class="arrow"><a href="#extensions">Extensions <small class="counter">4</small></a> </li>
+                      <li class="arrow"><a href="#demos">Demos <small class="counter">2</small></a></li>
+                      <li class="arrow"><a href="#themes">Themes <small class="counter">2</small></a></li>
+                  </ul>
+                  <h2>External Links</h2>
+                  <ul class="rounded">
+                      <li class="forward"><a target="_blank" href="http://www.jqtouch.com/">Homepage</a></li>
+                      <li class="forward"><a target="_blank" href="http://twitter.com/#!/jqtouch">Twitter</a></li>
+                      <li class="forward"><a target="_blank" href="http://github.com/senchalabs/jQTouch">GitHub</a></li>
+                  </ul>
+                  <ul class="individual">
+                      <li><a target="_blank" href="http://twitter.com/!#/davidkaneda">@davidkaneda</a></li>
+                      <li><a target="_blank" href="http://twitter.com/!#/beedesk">@beedesk</a></li>
+                  </ul>
+                  <div class="info">
+                      <p>Add this page to your home screen <br>for a richer experience.</p>
+                  </div>
+              </div>
+          </div>
+          <div id="metal">
+              <div class="toolbar">
+                  <h1>Metal Lists</h1>
+                  <a href="#" class="back">Back</a>
+              </div>
+              <ul class="metal scroll">
+                  <li class="arrow"><a href="#"><small>AM</small> 9:40 <em>Buenos Aires</em></a></li>
+                  <li class="arrow"><a href="#"><small>PM</small> 19:40 <em>Singapur</em></a></li>
+                  <li class="arrow"><a href="#"><small>PM</small> 22:40 <em>Japan</em></a></li>
+                  <li class="arrow"><a href="#"><small>PM</small> 11:40 <em>New York</em></a></li>
+                  <li class="arrow"><a href="#"><small>PM</small> 9:40 <em>Ontario</em></a></li>
+              </ul>
+          </div>
+          <div id="pageevents">
+              <div class="toolbar">
+                  <h1>Page Events</h1>
+                  <a class="back" href="#">Events</a>
+              </div>
+              <div class="info scroll" style="font-weight: normal;">
+              </div>
+          </div>
+          <div id="plastic">
+              <div class="toolbar">
+                  <h1>Plastic Lists</h1>
+                  <a href="#" class="back">Back</a>
+              </div>
+              <ul class="plastic scroll">
+                  <li class="arrow"><a href="#">Simple list <small>Label</small></a></li>
+                  <li class="arrow"><a href="#">Contact list <small class="counter">42</small></a></li>
+                  <li class="forward"><a href="#">Content List</a></li>
+                  <li><a href="#">Metal list</a></li>
+              </ul>
+          </div>
+          <div id="ui">
+              <div class="toolbar">
+                  <h1>UI Demos</h1>
+                  <a class="back" href="#">Home</a>
+              </div>
+              <div class="scroll">
+                  <h2>Lists</h2>
+                  <ul class="rounded">
+                      <li class="arrow"><a href="#edge">Edge to Edge</a></li>
+                      <li class="arrow"><a href="#plastic">Plastic</a></li>
+                      <li class="arrow"><a href="#metal">Metal</a></li>
+                  </ul>
+                  <h2>Buttons</h2>
+                  <ul class="rounded">
+                      <li class="arrow"><a href="#buttons">Buttons</a></li>
+                  </ul>
+                  <h2>Forms</h2>
+                  <ul class="rounded">
+                      <li class="arrow"><a href="#forms">Forms</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
   </body>
 </html>

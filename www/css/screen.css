@@ -1,0 +1,19 @@
+#jqt.fullscreen #home .info {
+    display: none;
+}
+#jqt #about {
+    padding: 100px 10px 40px;
+    text-shadow: rgba(0, 0, 0, 0.3) 0px -1px 0;
+    color: #999;
+    font-size: 13px;
+    text-align: center;
+    background: #161618;
+}
+#jqt #about p {
+    margin-bottom: 8px;
+}
+#jqt #about a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
