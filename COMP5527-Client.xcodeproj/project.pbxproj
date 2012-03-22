@@ -161,8 +161,7 @@
 				FC3037E9151A0BC7004F2E34 /* Plugins */,
 				FC3037B5151A0BC6004F2E34 /* Supporting Files */,
 			);
-			name = "COMP5527-Client";
-			path = "COMP5527-Project";
+			path = "COMP5527-Client";
 			sourceTree = "<group>";
 		};
 		FC3037B5151A0BC6004F2E34 /* Supporting Files */ = {
@@ -475,12 +474,12 @@
 				FRAMEWORK_SEARCH_PATHS = /Users/Shared/Cordova/Frameworks;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "COMP5527-Project/COMP5527-Client-Prefix.pch";
+				GCC_PREFIX_HEADER = "COMP5527-Client/COMP5527-Client-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1,",
 					"CORDOVA_FRAMEWORK=1",
 				);
-				INFOPLIST_FILE = "COMP5527-Project/COMP5527-Client-Info.plist";
+				INFOPLIST_FILE = "COMP5527-Client/COMP5527-Client-Info.plist";
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -505,12 +504,12 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = /Users/Shared/Cordova/Frameworks;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "COMP5527-Project/COMP5527-Client-Prefix.pch";
+				GCC_PREFIX_HEADER = "COMP5527-Client/COMP5527-Client-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"NDEBUG=1,",
 					"CORDOVA_FRAMEWORK=1",
 				);
-				INFOPLIST_FILE = "COMP5527-Project/COMP5527-Client-Info.plist";
+				INFOPLIST_FILE = "COMP5527-Client/COMP5527-Client-Info.plist";
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
