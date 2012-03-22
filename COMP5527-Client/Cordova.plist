@@ -7,7 +7,7 @@
 	<key>TopActivityIndicator</key>
 	<string>gray</string>
 	<key>EnableLocation</key>
-	<false/>
+	<true/>
 	<key>EnableViewportScale</key>
 	<false/>
 	<key>AutoHideSplashScreen</key>
@@ -23,6 +23,7 @@
 	<key>ExternalHosts</key>
 	<array>
 		<string>*.phonegap.com</string>
+		<string>*</string>
 	</array>
 	<key>Plugins</key>
 	<dict>
