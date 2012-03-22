@@ -42,7 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FC303796151A0BC6004F2E34 /* COMP5527-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COMP5527-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC303796151A0BC6004F2E34 /* COMP5527-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COMP5527-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC30379A151A0BC6004F2E34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FC30379C151A0BC6004F2E34 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FC30379E151A0BC6004F2E34 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -56,10 +56,10 @@
 		FC3037AE151A0BC6004F2E34 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FC3037B0151A0BC6004F2E34 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		FC3037B2151A0BC6004F2E34 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		FC3037B6151A0BC6004F2E34 /* COMP5527-Project-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "COMP5527-Project-Info.plist"; sourceTree = "<group>"; };
+		FC3037B6151A0BC6004F2E34 /* COMP5527-Client-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "COMP5527-Client-Info.plist"; sourceTree = "<group>"; };
 		FC3037B8151A0BC6004F2E34 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FC3037BA151A0BC6004F2E34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FC3037BC151A0BC6004F2E34 /* COMP5527-Project-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "COMP5527-Project-Prefix.pch"; sourceTree = "<group>"; };
+		FC3037BC151A0BC6004F2E34 /* COMP5527-Client-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "COMP5527-Client-Prefix.pch"; sourceTree = "<group>"; };
 		FC3037BD151A0BC6004F2E34 /* Cordova.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cordova.framework; path = /Users/Shared/Cordova/Frameworks/Cordova.framework; sourceTree = "<absolute>"; };
 		FC3037C2151A0BC6004F2E34 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FC3037C6151A0BC6004F2E34 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				FC3037F2151A0C58004F2E34 /* www */,
-				FC3037B4151A0BC6004F2E34 /* COMP5527-Project */,
+				FC3037B4151A0BC6004F2E34 /* COMP5527-Client */,
 				FC303799151A0BC6004F2E34 /* Frameworks */,
 				FC303797151A0BC6004F2E34 /* Products */,
 			);
@@ -127,7 +127,7 @@
 		FC303797151A0BC6004F2E34 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FC303796151A0BC6004F2E34 /* COMP5527-Project.app */,
+				FC303796151A0BC6004F2E34 /* COMP5527-Client.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,7 +152,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FC3037B4151A0BC6004F2E34 /* COMP5527-Project */ = {
+		FC3037B4151A0BC6004F2E34 /* COMP5527-Client */ = {
 			isa = PBXGroup;
 			children = (
 				FC3037BD151A0BC6004F2E34 /* Cordova.framework */,
@@ -161,16 +161,17 @@
 				FC3037E9151A0BC7004F2E34 /* Plugins */,
 				FC3037B5151A0BC6004F2E34 /* Supporting Files */,
 			);
+			name = "COMP5527-Client";
 			path = "COMP5527-Project";
 			sourceTree = "<group>";
 		};
 		FC3037B5151A0BC6004F2E34 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FC3037B6151A0BC6004F2E34 /* COMP5527-Project-Info.plist */,
+				FC3037B6151A0BC6004F2E34 /* COMP5527-Client-Info.plist */,
 				FC3037B7151A0BC6004F2E34 /* InfoPlist.strings */,
 				FC3037BA151A0BC6004F2E34 /* main.m */,
-				FC3037BC151A0BC6004F2E34 /* COMP5527-Project-Prefix.pch */,
+				FC3037BC151A0BC6004F2E34 /* COMP5527-Client-Prefix.pch */,
 				FC3037DE151A0BC7004F2E34 /* Cordova.plist */,
 				FC3037E7151A0BC7004F2E34 /* MainViewController.xib */,
 				FC3037EB151A0BC7004F2E34 /* verify.sh */,
@@ -265,9 +266,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FC303795151A0BC6004F2E34 /* COMP5527-Project */ = {
+		FC303795151A0BC6004F2E34 /* COMP5527-Client */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC3037EF151A0BC7004F2E34 /* Build configuration list for PBXNativeTarget "COMP5527-Project" */;
+			buildConfigurationList = FC3037EF151A0BC7004F2E34 /* Build configuration list for PBXNativeTarget "COMP5527-Client" */;
 			buildPhases = (
 				FC30378F151A0BC6004F2E34 /* Sources */,
 				FC303790151A0BC6004F2E34 /* Frameworks */,
@@ -280,9 +281,9 @@
 			);
 			dependencies = (
 			);
-			name = "COMP5527-Project";
+			name = "COMP5527-Client";
 			productName = "COMP5527-Project";
-			productReference = FC303796151A0BC6004F2E34 /* COMP5527-Project.app */;
+			productReference = FC303796151A0BC6004F2E34 /* COMP5527-Client.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -293,7 +294,7 @@
 			attributes = {
 				LastUpgradeCheck = 0430;
 			};
-			buildConfigurationList = FC30378D151A0BC6004F2E34 /* Build configuration list for PBXProject "COMP5527-Project" */;
+			buildConfigurationList = FC30378D151A0BC6004F2E34 /* Build configuration list for PBXProject "COMP5527-Client" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -308,7 +309,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FC303795151A0BC6004F2E34 /* COMP5527-Project */,
+				FC303795151A0BC6004F2E34 /* COMP5527-Client */,
 			);
 		};
 /* End PBXProject section */
@@ -474,12 +475,12 @@
 				FRAMEWORK_SEARCH_PATHS = /Users/Shared/Cordova/Frameworks;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "COMP5527-Project/COMP5527-Project-Prefix.pch";
+				GCC_PREFIX_HEADER = "COMP5527-Project/COMP5527-Client-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1,",
 					"CORDOVA_FRAMEWORK=1",
 				);
-				INFOPLIST_FILE = "COMP5527-Project/COMP5527-Project-Info.plist";
+				INFOPLIST_FILE = "COMP5527-Project/COMP5527-Client-Info.plist";
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -490,7 +491,7 @@
 					"-weak_library",
 					/usr/lib/libSystem.B.dylib,
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "COMP5527-Client";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -504,12 +505,12 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = /Users/Shared/Cordova/Frameworks;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "COMP5527-Project/COMP5527-Project-Prefix.pch";
+				GCC_PREFIX_HEADER = "COMP5527-Project/COMP5527-Client-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"NDEBUG=1,",
 					"CORDOVA_FRAMEWORK=1",
 				);
-				INFOPLIST_FILE = "COMP5527-Project/COMP5527-Project-Info.plist";
+				INFOPLIST_FILE = "COMP5527-Project/COMP5527-Client-Info.plist";
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -520,7 +521,7 @@
 					"-weak_library",
 					/usr/lib/libSystem.B.dylib,
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "COMP5527-Client";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -530,7 +531,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FC30378D151A0BC6004F2E34 /* Build configuration list for PBXProject "COMP5527-Project" */ = {
+		FC30378D151A0BC6004F2E34 /* Build configuration list for PBXProject "COMP5527-Client" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC3037ED151A0BC7004F2E34 /* Debug */,
@@ -539,13 +540,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC3037EF151A0BC7004F2E34 /* Build configuration list for PBXNativeTarget "COMP5527-Project" */ = {
+		FC3037EF151A0BC7004F2E34 /* Build configuration list for PBXNativeTarget "COMP5527-Client" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC3037F0151A0BC7004F2E34 /* Debug */,
 				FC3037F1151A0BC7004F2E34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
