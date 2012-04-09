@@ -15,12 +15,24 @@ localdata.save({key:"_patientlist",value:data});
 localdata.get("_patientlist",function(data){
   console.log(data);
   });
+  
+localdata.get("_patientinfo",function(data){
+  console.log(data);
+  });
 
 /* replace the data with new values */
 localdata.get("_patientlist",function(olddata){
-  console.log(olddata);
   var newdata = {};
   newdata = olddata.value;
   newdata.beername = "Not Wet Hop";
   localdata.save({key:olddata.key,value:newdata});
   });
+  
+/* test whether a key exists */
+localdata.exists('_patientlist', function(exists) {
+  console.log('Existence is: ' + exists)
+  })
+
+localdata.exists('_patientinfo', function(exists) {
+  console.log('Existence is: ' + exists)
+  })
