@@ -22,3 +22,9 @@
   margin: 10px 30px 6px;
   color: #eee;
 }
+
+#jqt .footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+}

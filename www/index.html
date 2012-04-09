@@ -49,76 +49,79 @@
           </div>
           <div id="patientlist">
               <div class="toolbar">
-                  <h1>Patient Info</h1>
+                  <h1 id="patientlist_title">Patient Info</h1>
                   <a class="back" href="#">Home</a>
               </div>
-              <ul class="plastic scroll">
+              <ul id="patientlist_ul" class="plastic scroll">
                   <li class="arrow"><a href="#patientinfo">Jetson, <em>Jane</em></a></li>
                   <li class="arrow"><a href="#patientinfo">Jetson, <em>Judy</em></a></li>
               </ul>
+              <div id="patientlist_lastupdate" class="info footer">Last updated: YYYY-MM-DD HH:MM:SS</div>
           </div>
           <div id="patientinfo">
               <div class="toolbar">
-                  <h1>QING Pei</h1>
+                  <h1 id="patientinfo_title">Jetson, <em>Jane</em></h1>
                   <a class="back" href="#">Back</a>
               </div>
               <h2>Basic Info</h2>
-              <ul class="plastic scroll">
-                  <li><a href="#">qingpei@qingpei.me <small>email</small></a></li>
-                  <li><a href="#">Mar 17, 1988 <small>birthday</small></a></li>
-                  <li><a href="#">Male <small>gender</small></a></li>
-                  <li><a href="#">Single <small>marital</small></a></li>
+              <div id="basicinfo"></div>
+              <ul id="basicinfo_ul" class="plastic scroll">
+                  <li><a id="basicinfo_email" href="#">jetson@jane.com <small>email</small></a></li>
+                  <li><a id="basicinfo_birthday" href="#">Mar 17, 1988 <small>birthday</small></a></li>
+                  <li><a id="basicinfo_gender" href="#">Male <small>gender</small></a></li>
+                  <li><a id="basicinfo_marital" href="#">Single <small>marital</small></a></li>
               </ul>
               <h2>Allergies</h2>
               <div id="allergies" class="content">Some text here</div>
               <h2>Records</h2>
-              <ul class="plastic scroll">
+              <ul id="patientinfo_records_ul" class="plastic scroll">
                   <li class="arrow"><a href="#record">Jan 1, 2012 </a></li>
                   <li class="arrow"><a href="#record">Feb 29, 2012 </a></li>
               </ul> 
+              <div id="patientinfo_lastupdate" class="info footer">Last updated: YYYY-MM-DD HH:MM:SS</div>
           </div>
           <div id="record">
               <div class="toolbar">
-                  <h1>Record</h1>
+                  <h1 id="record_title">Jan 1, 2012</h1>
                   <a class="back" href="#">Back</a>
               </div>
               <h2>doctor</h2>
-              <div id="doctor" class="content">doc name</div>
+              <div id="record_doctor" class="content">doc name</div>
               <h2>symptom</h2>
-              <div id="symptom" class="content">no breath</div>
+              <div id="record_symptom" class="content">no breath</div>
               <h2>diagnosis</h2>
-              <div id="diagnosis" class="content">dead</div>
+              <div id="record_diagnosis" class="content">dead</div>
               <h2>treatment</h2>
-              <div id="treatment" class="content">nothing to do</div>
+              <div id="record_treatment" class="content">nothing to do</div>
               <h2>remark</h2>
-              <div id="remark" class="content">wtf</div>
+              <div id="record_remark" class="content">wtf</div>
+              <div id="record_lastupdate" class="info footer">Last updated: YYYY-MM-DD HH:MM:SS</div>
           </div>
           <div id="appointments">
               <div class="toolbar">
-                  <h1>Appointments</h1>
+                  <h1 id="appointments_title">Appointments</h1>
                   <a class="back" href="#">Home</a>
                   <a class="button slideup" id="infoButton" href="#addappointment">Add</a>
               </div>
-              <ul class="plastic scroll">
+              <ul id="appointments_ul" class="plastic scroll">
                   <li class="arrow"><a href="#appointment">Mar 1, 2012 09:30 <small>long doc name</small></a></li>
                   <li class="arrow"><a href="#appointment">April 1, 2012 14:00 <small>doc name</small></a></li>
               </ul>
+              <div id="appointments_lastupdate" class="info footer">Last updated: YYYY-MM-DD HH:MM:SS</div>
           </div>
           <div id="appointment">
               <div class="toolbar">
-                  <h1>Appointment</h1>
+                  <h1 id="appointment_title">Appointment</h1>
                   <a class="back" href="#">Back</a>
               </div>
-              <ul class="rounded">
-			  <li><label for="user_name">Doctor</label>  <input type="text" name="doctor_name" id="doctor_name"/></li>
-    		  <li><label for="user_name">Patient</label> <input type="text" name="patient_name" id="patient_name"/></li>
-    		  <li><label for="user_name">Start</label>   <input type="text" name="appointment_start" id="appointment_start"/></li>
-    		  <li><label for="user_name">End</label>     <input type="text" name="appointment_end" id="appointment_end"/></li>
+              <ul id="appointment_ul" class="rounded">
+			  <li><label for="user_name">Doctor</label>  <input type="text" name="doctor_name" id="appointment_doctor_name"/></li>
+    		  <li><label for="user_name">Patient</label> <input type="text" name="patient_name" id="appointment_patient_name"/></li>
+    		  <li><label for="user_name">Start</label>   <input type="text" name="start" id="appointment_start"/></li>
+    		  <li><label for="user_name">End</label>     <input type="text" name="end" id="appointment_end"/></li>
 			  </ul>
 			  <a href="#" class="whiteButton">Update</a>
-			  <div class="info">
-			  Last updated: YYYY-MM-DD HH:MM:SS
-			  </div>
+			  <div id="appointment_lastupdate" class="info footer">Last updated: YYYY-MM-DD HH:MM:SS</div>
           </div>
           <div id="addappointment">
               <div class="toolbar">
