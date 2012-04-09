@@ -24,6 +24,13 @@
 	<script type="text/javascript" charset="utf-8" src="js/cordova-1.5.0.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/init.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/script.js"></script>
+	<!-- Scripts for lawnchair storage -->
+    <script type="text/javascript" charset="utf-8" src="js/lawnchair/src/Lawnchair.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/lawnchair/src/adapters/indexed-db.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/lawnchair/src/adapters/webkit-sqlite.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/lawnchair/src/adapters/dom.js"></script>
+    
+    <script type="text/javascript" charset="utf-8" src="js/storage.js"></script>
   </head>
   <body onload="onBodyLoad()">
 		<div id="jqt">
@@ -44,8 +51,8 @@
               </div>
               <div class="scroll">
                   <ul class="rounded">
-                      <li class="arrow"><a href="#patientlist">Patient Info</a> </li>
-                      <li class="arrow"><a href="#appointments">Appointments</a> </li>
+                      <li class="arrow"><a id="_patientlist" href="#patientlist">Patient Info</a> </li>
+                      <li class="arrow"><a id="_appointments" href="#appointments">Appointments</a> </li>
                   </ul>
                   <h2>External Links</h2>
                   <ul class="rounded">
