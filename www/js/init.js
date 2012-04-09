@@ -92,5 +92,5 @@ $(function(){
 	function onDeviceReady()
 	{
 		// do your thing!
-		navigator.notification.alert("Cordova is working")
+/* 		navigator.notification.alert("Cordova is working") */
 	}
