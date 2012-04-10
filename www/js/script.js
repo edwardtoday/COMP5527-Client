@@ -37,7 +37,7 @@ $(document).ready(function(){
    		    		}
    		    	arr.push('</ul>');
    		    }  		
-   		    $("ul#patientinfo_records_ul").replaceWith(arr.join(''));
+   		    $("#patientinfo_records_ul").replaceWith(arr.join(''));
         		 });
     	 });
     	 
@@ -107,9 +107,9 @@ $(document).ready(function(){
 });
 
 $.tzPOST = function(action,data,callback){
-	$.post('http://localhost:8080/Health_managment/Action?action='+action,data,callback,'text');
+	$.post('Action?action='+action,data,callback,'text');
 }
 
 $.tzGET = function(action,data,callback){
-	$.get('php/ajax.php?action='+action,data,callback,'text');
+	$.get('Action?action='+action,data,callback,'text');
 }
