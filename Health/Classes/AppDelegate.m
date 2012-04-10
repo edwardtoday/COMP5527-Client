@@ -19,9 +19,9 @@
 
 //
 //  AppDelegate.m
-//  COMP5527-Client
+//  Health
 //
-//  Created by QING Pei on 4/10/12.
+//  Created by QING Pei on 4/11/12.
 //  Copyright __MyCompanyName__ 2012. All rights reserved.
 //
 
@@ -64,7 +64,7 @@
     NSURL* url = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];
     if (url && [url isKindOfClass:[NSURL class]]) {
         self.invokeString = [url absoluteString];
-		NSLog(@"COMP5527-Client launchOptions = %@", url);
+		NSLog(@"Health launchOptions = %@", url);
     }    
     
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
