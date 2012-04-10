@@ -19,9 +19,9 @@
 
 //
 //  MainViewController.h
-//  COMP5527-Project
+//  COMP5527-Client
 //
-//  Created by QING Pei on 3/21/12.
+//  Created by QING Pei on 4/10/12.
 //  Copyright __MyCompanyName__ 2012. All rights reserved.
 //
 
