@@ -75,11 +75,22 @@ $(document).ready(function(){
     		 var num=$(this).attr("name");  		 
     		 $.tzPOST("getAppointmentinfo",null,function(data){
     	     var r=eval( "(" + data + ")" );
-    	     $("#appointment_doctor_name").val("'"+r.appointmentinfo[num].doctor+"'");
-    	     $("#appointment_start").val("'"+r.appointmentinfo[num].begintime+"'");
-    	     $("#appointment_end").val("'"+r.appointmentinfo[num].endtime+"'");
+    	     $("#appointment_doctor_name").val(r.appointmentinfo[num].doctor);
+    	     $("#appointment_start").val(r.appointmentinfo[num].begintime);
+    	     $("#appointment_end").val(r.appointmentinfo[num].endtime);
     		 });
     	 });
+    	 
+    	 
+    	 $("[href='#doaddappointment']").live('click',function(){	 
+    		 $.tzPOST("addAppointmentinfo",$("#addappointmentinfo").serialize(),function(data){
+    	     var r=eval( "(" + data + ")" );
+    	    // $("#appointment_doctor_name").val(r.appointmentinfo[num].doctor);
+    	   //  $("#appointment_start").val(r.appointmentinfo[num].begintime);
+    	    // $("#appointment_end").val(r.appointmentinfo[num].endtime);
+    		 });
+    	 });
+    	 
 });
 
 $.tzPOST = function(action,data,callback){
