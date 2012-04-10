@@ -37,7 +37,7 @@ $(document).ready(function(){
    		    		}
    		    	arr.push('</ul>');
    		    }  		
-   		    $("ul#patientinfo_records_ul").replaceWith(arr.join(''));
+   		    $("#patientinfo_records_ul").replaceWith(arr.join(''));
         		 });
     	 });
     	 
@@ -83,12 +83,15 @@ $(document).ready(function(){
     	 
     	 
     	 $("[href='#doaddappointment']").live('click',function(){	 
-    		// $.tzPOST("addAppointmentinfo",$("#addappointmentinfo").serialize(),function(data){
-    	     //var r=eval( "(" + data + ")" );
+    		 $.tzPOST("addAppointmentinfo",$("#addappointmentinfo").serialize(),function(data){
+    	     var r=eval( "(" + data + ")" );
     	    // $("#appointment_doctor_name").val(r.appointmentinfo[num].doctor);
-    	   //  $("#appointment_start").val(r.appointmentinfo[num].begintime);
+    	    //  $("#appointment_start").val(r.appointmentinfo[num].begintime);
     	    // $("#appointment_end").val(r.appointmentinfo[num].endtime);
-    		// });
+    	     //if(r.result)
+    	    	 
+    	     //else
+    		 });
     	 });
     	 
     	 $("[href='#doupdateappointment']").live('click',function(){	 
@@ -100,12 +103,13 @@ $(document).ready(function(){
     		 });
     	 });
     	 
+    	 
 });
 
 $.tzPOST = function(action,data,callback){
-	$.post('http://localhost:8080/Health_managment/Action?action='+action,data,callback,'text');
+	$.post('Action?action='+action,data,callback,'text');
 }
 
 $.tzGET = function(action,data,callback){
-	$.get('php/ajax.php?action='+action,data,callback,'text');
+	$.get('Action?action='+action,data,callback,'text');
 }
