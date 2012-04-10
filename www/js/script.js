@@ -20,11 +20,11 @@ $(document).ready(function(){
     		 $.tzPOST("getUserinfo",null,function(data){
     	     var r=eval( "(" + data + ")" );
     	     $("#patientinfo_title").replaceWith('<h1 id="patientinfo_title">'+r.userinfo[num].fullName+'</h1>');
-    		 $("#basicinfo_email").replaceWith('<a id="basicinfo_email" href="#">'+r.userinfo[num].emailaddress+'</a>');
-    		 $("#basicinfo_birthday").replaceWith('<a id="basicinfo_birthday" href="#">'+r.userinfo[num].birthDate+'</a>');
-    		 $("#basicinfo_gender").replaceWith('<a id="basicinfo_gender" href="#">'+r.userinfo[num].gender+'</a>');
-    		 $("#basicinfo_marital").replaceWith('<a id="basicinfo_marital" href="#">'+r.userinfo[num].married+'</a>');
-    		 $("div#allergies").replaceWith('<div id="allergies" class="content">'+r.userinfo[num].allergies+'</div>');
+    		 $("#basicinfo_email").replaceWith('<a id="basicinfo_email" href="#">'+r.userinfo[num].emailaddress+'<small>email</small></a>');
+    		 $("#basicinfo_birthday").replaceWith('<a id="basicinfo_birthday" href="#">'+r.userinfo[num].birthDate+'<small>birthday</small></a>');
+    		 $("#basicinfo_gender").replaceWith('<a id="basicinfo_gender" href="#">'+r.userinfo[num].gender+'<small>gender</small></a>');
+    		 $("#basicinfo_marital").replaceWith('<a id="basicinfo_marital" href="#">'+r.userinfo[num].married+'<small>marital</small></a>');
+    		 $("#allergies").val(r.userinfo[num].allergies);
     		 });
     		 $.tzPOST("getRecordinfo",null,function(data){
     			var r=eval( "(" + data + ")" );
@@ -83,6 +83,15 @@ $(document).ready(function(){
     	 
     	 
     	 $("[href='#doaddappointment']").live('click',function(){	 
+    		// $.tzPOST("addAppointmentinfo",$("#addappointmentinfo").serialize(),function(data){
+    	     //var r=eval( "(" + data + ")" );
+    	    // $("#appointment_doctor_name").val(r.appointmentinfo[num].doctor);
+    	   //  $("#appointment_start").val(r.appointmentinfo[num].begintime);
+    	    // $("#appointment_end").val(r.appointmentinfo[num].endtime);
+    		// });
+    	 });
+    	 
+    	 $("[href='#doupdateappointment']").live('click',function(){	 
     		 $.tzPOST("addAppointmentinfo",$("#addappointmentinfo").serialize(),function(data){
     	     var r=eval( "(" + data + ")" );
     	    // $("#appointment_doctor_name").val(r.appointmentinfo[num].doctor);
