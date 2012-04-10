@@ -7,7 +7,7 @@
 	<key>TopActivityIndicator</key>
 	<string>gray</string>
 	<key>EnableLocation</key>
-	<true/>
+	<false/>
 	<key>EnableViewportScale</key>
 	<false/>
 	<key>AutoHideSplashScreen</key>
@@ -21,10 +21,7 @@
 	<key>OpenAllWhitelistURLsInWebView</key>
 	<false/>
 	<key>ExternalHosts</key>
-	<array>
-		<string>*.phonegap.com</string>
-		<string>*</string>
-	</array>
+	<array/>
 	<key>Plugins</key>
 	<dict>
 		<key>org.apache.cordova.accelerometer</key>

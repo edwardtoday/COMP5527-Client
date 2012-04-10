@@ -19,9 +19,9 @@
 
 //
 //  MainViewController.h
-//  COMP5527-Project
+//  Health
 //
-//  Created by QING Pei on 3/21/12.
+//  Created by QING Pei on 4/11/12.
 //  Copyright __MyCompanyName__ 2012. All rights reserved.
 //
 

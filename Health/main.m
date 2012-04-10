@@ -16,37 +16,20 @@
  specific language governing permissions and limitations
  under the License.
  */
-
 //
-//  AppDelegate.h
-//  COMP5527-Project
+//  main.m
+//  Health
 //
-//  Created by QING Pei on 3/21/12.
+//  Created by QING Pei on 4/11/12.
 //  Copyright __MyCompanyName__ 2012. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-#ifdef CORDOVA_FRAMEWORK
-    #import <Cordova/CDVViewController.h>
-#else
-    #import "CDVViewController.h"
-#endif
-
-
-@interface AppDelegate : NSObject < UIApplicationDelegate, UIWebViewDelegate, CDVCommandDelegate > {
-
-	NSString* invokeString;
+int main(int argc, char *argv[]) {
+    
+    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+    int retVal = UIApplicationMain(argc, argv, nil, @"AppDelegate");
+    [pool release];
+    return retVal;
 }
-
-// invoke string is passed to your app on launch, this is only valid if you 
-// edit FooBar.plist to add a protocol
-// a simple tutorial can be found here : 
-// http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
-
-@property (nonatomic, copy)  NSString* invokeString;
-@property (nonatomic, retain) IBOutlet UIWindow* window;
-@property (nonatomic, retain) IBOutlet CDVViewController* viewController;
-
-@end
-

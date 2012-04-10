@@ -18,12 +18,14 @@
  */
 
 //
-//  MainViewController.h
-//  COMP5527-Project
+//  AppDelegate.h
+//  Health
 //
-//  Created by QING Pei on 3/21/12.
+//  Created by QING Pei on 4/11/12.
 //  Copyright __MyCompanyName__ 2012. All rights reserved.
 //
+
+#import <UIKit/UIKit.h>
 
 #ifdef CORDOVA_FRAMEWORK
     #import <Cordova/CDVViewController.h>
@@ -31,6 +33,20 @@
     #import "CDVViewController.h"
 #endif
 
-@interface MainViewController : CDVViewController
+
+@interface AppDelegate : NSObject < UIApplicationDelegate, UIWebViewDelegate, CDVCommandDelegate > {
+
+	NSString* invokeString;
+}
+
+// invoke string is passed to your app on launch, this is only valid if you 
+// edit FooBar.plist to add a protocol
+// a simple tutorial can be found here : 
+// http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+
+@property (nonatomic, copy)  NSString* invokeString;
+@property (nonatomic, retain) IBOutlet UIWindow* window;
+@property (nonatomic, retain) IBOutlet CDVViewController* viewController;
 
 @end
+

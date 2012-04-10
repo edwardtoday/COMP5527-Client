@@ -69,7 +69,7 @@
                   <li class="arrow"><a href="#patientinfo">Jetson, <em>Jane</em></a></li>
                   <li class="arrow"><a href="#patientinfo">Jetson, <em>Judy</em></a></li>
               </ul>
-              <div id="patientlist_lastupdate" class="info footer">Last updated: YYYY-MM-DD HH:MM:SS</div>
+<!--               <div id="patientlist_lastupdate" class="info footer">Last updated: YYYY-MM-DD HH:MM:SS</div> -->
           </div>
           <div id="patientinfo">
               <div class="toolbar">
@@ -78,37 +78,37 @@
               </div>
               <h2>Basic Info</h2>
               <div id="basicinfo"></div>
-              <ul id="basicinfo_ul" class="plastic scroll">
+              <ul id="basicinfo_ul" class="plastic scroll">           
                   <li><a id="basicinfo_email" href="#">jetson@jane.com <small>email</small></a></li>
                   <li><a id="basicinfo_birthday" href="#">Mar 17, 1988 <small>birthday</small></a></li>
                   <li><a id="basicinfo_gender" href="#">Male <small>gender</small></a></li>
                   <li><a id="basicinfo_marital" href="#">Single <small>marital</small></a></li>
-              </ul>
-              <h2>Allergies</h2>
-              <div id="allergies" class="content">Some text here</div>
+                  <li><small>Allergies</small><textarea id="allergies" cols=2 placeholder="Textarea"></textarea><li>
+              </ul>         
               <h2>Records</h2>
               <ul id="patientinfo_records_ul" class="plastic scroll">
                   <li class="arrow"><a href="#record">Jan 1, 2012 </a></li>
                   <li class="arrow"><a href="#record">Feb 29, 2012 </a></li>
               </ul> 
-              <div id="patientinfo_lastupdate" class="info footer">Last updated: YYYY-MM-DD HH:MM:SS</div>
+<!--               <div id="patientinfo_lastupdate" class="info footer">Last updated: YYYY-MM-DD HH:MM:SS</div> -->
           </div>
           <div id="record">
               <div class="toolbar">
                   <h1 id="record_title">Jan 1, 2012</h1>
                   <a class="back" href="#">Back</a>
               </div>
-              <h2>doctor</h2>
-              <div id="record_doctor" class="content">doc name</div>
-              <h2>symptom</h2>
-              <div id="record_symptom" class="content">no breath</div>
-              <h2>diagnosis</h2>
-              <div id="record_diagnosis" class="content">dead</div>
-              <h2>treatment</h2>
-              <div id="record_treatment" class="content">nothing to do</div>
-              <h2>remark</h2>
-              <div id="record_remark" class="content">wtf</div>
-              <div id="record_lastupdate" class="info footer">Last updated: YYYY-MM-DD HH:MM:SS</div>
+               <ul id="appointment_ul" class="rounded">
+             <li> <p >doctor</p>
+              <p id="record_doctor" class="content">doc name</p></li>
+            <li> <p>symptom</p>
+               <p id="record_symptom" class="content">no breath</p></li>
+            <li> <p>diagnosis</p>
+               <p id="record_diagnosis" class="content">dead</p></li>
+             <li> <p>treatment</p>
+              <p id="record_treatment" class="content">nothing to do</p></li>
+              <li>  <p>remark</p>
+                <p id="record_remark" class="content">wtf</p></li></ul>
+<!--               <div id="record_lastupdate" class="info footer">Last updated: YYYY-MM-DD HH:MM:SS</div> -->
           </div>
           <div id="appointments">
               <div class="toolbar">
@@ -120,7 +120,7 @@
                   <li class="arrow"><a href="#appointment">Mar 1, 2012 09:30 <small>long doc name</small></a></li>
                   <li class="arrow"><a href="#appointment">April 1, 2012 14:00 <small>doc name</small></a></li>
               </ul>
-              <div id="appointments_lastupdate" class="info footer">Last updated: YYYY-MM-DD HH:MM:SS</div>
+<!--               <div id="appointments_lastupdate" class="info footer">Last updated: YYYY-MM-DD HH:MM:SS</div> -->
           </div>
           <div id="appointment">
               <div class="toolbar">
@@ -133,8 +133,8 @@
     		  <li><label for="user_name">Start</label>   <input type="text" name="start" id="appointment_start"/></li>
     		  <li><label for="user_name">End</label>     <input type="text" name="end" id="appointment_end"/></li>
 			  </ul>
-			  <a href="#" class="whiteButton">Update</a>
-			  <div id="appointment_lastupdate" class="info footer">Last updated: YYYY-MM-DD HH:MM:SS</div>
+			  <a href="#doupdateappointment" class="whiteButton">Update</a>
+<!-- 			  <div id="appointment_lastupdate" class="info footer">Last updated: YYYY-MM-DD HH:MM:SS</div> -->
           </div>
           <div id="addappointment">
               <div class="toolbar">
@@ -149,8 +149,14 @@
     		  <li><label for="user_name">End</label>     <input type="text" name="appointment_end" id="appointment_end"/></li>
 			  </ul>
 			  </form>
-			  <a href="#doaddappointment" class="whiteButton">Add</a>
+			  <a href="#doaddappointment" class="whiteButton dissolve" style=>Add</a>
           </div>
+          <div id="doaddappointment" style="top: 0px; " class="">
+                <div id="addresult "style="font-size: 1.5em; text-align: center; margin: 160px 0 90px; font-family: Marker felt;">
+                   add succeed! please go back           
+                </div>
+                <a style="margin-bottom: 120px; color: rgba(0, 0, 0, 0.898438); " href="#" class="whiteButton goback">Go back</a>
+            </div>
       </div>
   </body>
 </html>
