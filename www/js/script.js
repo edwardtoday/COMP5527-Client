@@ -83,12 +83,15 @@ $(document).ready(function(){
     	 
     	 
     	 $("[href='#doaddappointment']").live('click',function(){	 
-    		// $.tzPOST("addAppointmentinfo",$("#addappointmentinfo").serialize(),function(data){
-    	     //var r=eval( "(" + data + ")" );
+    		 $.tzPOST("addAppointmentinfo",$("#addappointmentinfo").serialize(),function(data){
+    	     var r=eval( "(" + data + ")" );
     	    // $("#appointment_doctor_name").val(r.appointmentinfo[num].doctor);
-    	   //  $("#appointment_start").val(r.appointmentinfo[num].begintime);
+    	    //  $("#appointment_start").val(r.appointmentinfo[num].begintime);
     	    // $("#appointment_end").val(r.appointmentinfo[num].endtime);
-    		// });
+    	     //if(r.result)
+    	    	 
+    	     //else
+    		 });
     	 });
     	 
     	 $("[href='#doupdateappointment']").live('click',function(){	 
@@ -99,6 +102,7 @@ $(document).ready(function(){
     	    // $("#appointment_end").val(r.appointmentinfo[num].endtime);
     		 });
     	 });
+    	 
     	 
 });
 
