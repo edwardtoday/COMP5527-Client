@@ -94,3 +94,36 @@ $(function(){
 		// do your thing!
 /* 		navigator.notification.alert("Cordova is working") */
 	}
+	
+
+	// Demo 1 of connectivity check
+	// http://docs.phonegap.com/en/1.0.0/phonegap_connection_connection.md.html#Connection
+    var states = {};
+    states[Connection.UNKNOWN]  = 'Unknown connection';
+    states[Connection.ETHERNET] = 'Ethernet connection';
+    states[Connection.WIFI]     = 'WiFi connection';
+    states[Connection.CELL_2G]  = 'Cell 2G connection';
+    states[Connection.CELL_3G]  = 'Cell 3G connection';
+    states[Connection.CELL_4G]  = 'Cell 4G connection';
+    states[Connection.NONE]     = 'No network connection';
+
+	var networkState = navigator.network.connection.type;
+	// Then you can check the Connection type by:
+	// 	states[networkState]
+
+	// Demo 2 of connectivity check
+	// http://www.neotericdesign.com/blog/checking-the-online-status-with-phonegap-jquery
+	// Or you may want to directly test if out database host is reachable
+	navigator.network.isReachable("google.com", reachableCallback, {});
+	
+	function reachableCallback(reachability) {
+	  // There is no consistency on the format of reachability
+	  var networkState = reachability.code || reachability;
+	  var states = {};
+	  states[NetworkStatus.NOT_REACHABLE]                      = 'No network connection';
+	  states[NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK] = 'Carrier data connection';
+	  states[NetworkStatus.REACHABLE_VIA_WIFI_NETWORK]         = 'WiFi connection';
+
+	  // We want to be able to check the online variable in our jQuery
+	  if (networkState != 0) online = true;
+	}
