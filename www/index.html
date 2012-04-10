@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Mobile Healthcare</title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+
+	<style type="text/css" media="screen">@import "js/jQTouch/themes/css/jqtouch.css";</style>
+        
+<!-- 	<script src="js/jQTouch/src/lib/zepto.min.js" type="text/javascript" charset="utf-8"></script> -->
+<!-- 	<script src="js/jQTouch/src/jqtouch.js" type="text/javascript" charset="utf-8"></script> -->
+    <!-- Uncomment the following three lines (and comment out the previous two) to use jQuery instead of Zepto. -->
+    <script src="js/jQTouch/src/lib/jquery-1.7.min.js" type="application/x-javascript" charset="utf-8"></script>
+    <script src="js/jQTouch/src/jqtouch.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jQTouch/src/jqtouch-jquery.js" type="application/x-javascript" charset="utf-8"></script>
+
+	<link rel="stylesheet" media="screen" href="css/screen.css" type="text/css" />
+	<!-- iPad/iPhone specific css below, add after your main css >
+	<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="css/ipad.css" type="text/css" />		
+	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="css/iphone.css" type="text/css" />		
+	-->
+	<!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+	<script type="text/javascript" charset="utf-8" src="js/cordova-1.5.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/init.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/script.js"></script>
+	<!-- Scripts for lawnchair storage -->
+    <script type="text/javascript" charset="utf-8" src="js/lawnchair/src/Lawnchair.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/lawnchair/src/adapters/indexed-db.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/lawnchair/src/adapters/webkit-sqlite.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/lawnchair/src/adapters/dom.js"></script>
+    
+    <script type="text/javascript" charset="utf-8" src="js/storage.js"></script>
+  </head>
+  <body onload="onBodyLoad()">
+		<div id="jqt">
+          <div id="about" class="selectable">
+                  <p><img src="img/logo.png" /></p>
+                  <p><strong>Healthcare App</strong><br>Version 0.1<br>
+                      <a href="http://github.com/edwardtoday/COMP5527-Client">GitHub Repo</a></p>
+                  <li>QING Pei, 11500811g</li>
+                  <li>Mei Youzhi, 11521683g</li>
+                  <li>SHAO Shuai, 11552402g</li>
+                  <li>RAN Jun, 09694163g</li>
+                  <p><br><br><a href="#" class="grayButton goback">Close</a></p>
+          </div>
+          <div id="home" class="current">
+              <div class="toolbar">
+                  <h1>Home</h1>
+                  <a class="button slideup" id="infoButton" href="#about">About</a>
+              </div>
+              <div class="scroll">
+                  <ul class="rounded">
+                      <li class="arrow"><a id="_patientlist" href="#patientlist">Patient Info</a> </li>
+                      <li class="arrow"><a id="_appointments" href="#appointments">Appointments</a> </li>
+                  </ul>
+                  <h2>External Links</h2>
+                  <ul class="rounded">
+                      <li class="forward"><a target="_blank" href="http://github.com/edwardtoday/COMP5527-Client">This app at GitHub</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div id="patientlist">
+              <div class="toolbar">
+                  <h1 id="patientlist_title">Patient Info</h1>
+                  <a class="back" href="#">Home</a>
+              </div>
+              <ul id="patientlist_ul" class="plastic scroll">
+                  <li class="arrow"><a href="#patientinfo">Jetson, <em>Jane</em></a></li>
+                  <li class="arrow"><a href="#patientinfo">Jetson, <em>Judy</em></a></li>
+              </ul>
+              <div id="patientlist_lastupdate" class="info footer">Last updated: YYYY-MM-DD HH:MM:SS</div>
+          </div>
+          <div id="patientinfo">
+              <div class="toolbar">
+                  <h1 id="patientinfo_title">Jetson, <em>Jane</em></h1>
+                  <a class="back" href="#">Back</a>
+              </div>
+              <h2>Basic Info</h2>
+              <div id="basicinfo"></div>
+              <ul id="basicinfo_ul" class="plastic scroll">
+                  <li><a id="basicinfo_email" href="#">jetson@jane.com <small>email</small></a></li>
+                  <li><a id="basicinfo_birthday" href="#">Mar 17, 1988 <small>birthday</small></a></li>
+                  <li><a id="basicinfo_gender" href="#">Male <small>gender</small></a></li>
+                  <li><a id="basicinfo_marital" href="#">Single <small>marital</small></a></li>
+              </ul>
+              <h2>Allergies</h2>
+              <div id="allergies" class="content">Some text here</div>
+              <h2>Records</h2>
+              <ul id="patientinfo_records_ul" class="plastic scroll">
+                  <li class="arrow"><a href="#record">Jan 1, 2012 </a></li>
+                  <li class="arrow"><a href="#record">Feb 29, 2012 </a></li>
+              </ul> 
+              <div id="patientinfo_lastupdate" class="info footer">Last updated: YYYY-MM-DD HH:MM:SS</div>
+          </div>
+          <div id="record">
+              <div class="toolbar">
+                  <h1 id="record_title">Jan 1, 2012</h1>
+                  <a class="back" href="#">Back</a>
+              </div>
+              <h2>doctor</h2>
+              <div id="record_doctor" class="content">doc name</div>
+              <h2>symptom</h2>
+              <div id="record_symptom" class="content">no breath</div>
+              <h2>diagnosis</h2>
+              <div id="record_diagnosis" class="content">dead</div>
+              <h2>treatment</h2>
+              <div id="record_treatment" class="content">nothing to do</div>
+              <h2>remark</h2>
+              <div id="record_remark" class="content">wtf</div>
+              <div id="record_lastupdate" class="info footer">Last updated: YYYY-MM-DD HH:MM:SS</div>
+          </div>
+          <div id="appointments">
+              <div class="toolbar">
+                  <h1 id="appointments_title">Appointments</h1>
+                  <a class="back" href="#">Home</a>
+                  <a class="button slideup" id="infoButton" href="#addappointment">Add</a>
+              </div>
+              <ul id="appointments_ul" class="plastic scroll">
+                  <li class="arrow"><a href="#appointment">Mar 1, 2012 09:30 <small>long doc name</small></a></li>
+                  <li class="arrow"><a href="#appointment">April 1, 2012 14:00 <small>doc name</small></a></li>
+              </ul>
+              <div id="appointments_lastupdate" class="info footer">Last updated: YYYY-MM-DD HH:MM:SS</div>
+          </div>
+          <div id="appointment">
+              <div class="toolbar">
+                  <h1 id="appointment_title">Appointment</h1>
+                  <a class="back" href="#">Back</a>
+              </div>
+              <ul id="appointment_ul" class="rounded">
+			  <li><label for="user_name">Doctor</label>  <input type="text" name="doctor_name" id="appointment_doctor_name"/></li>
+    		  <li><label for="user_name">Patient</label> <input type="text" name="patient_name" id="appointment_patient_name"/></li>
+    		  <li><label for="user_name">Start</label>   <input type="text" name="start" id="appointment_start"/></li>
+    		  <li><label for="user_name">End</label>     <input type="text" name="end" id="appointment_end"/></li>
+			  </ul>
+			  <a href="#" class="whiteButton">Update</a>
+			  <div id="appointment_lastupdate" class="info footer">Last updated: YYYY-MM-DD HH:MM:SS</div>
+          </div>
+          <div id="addappointment">
+              <div class="toolbar">
+                  <h1>Appointment</h1>
+                  <a class="back" href="#">Back</a>
+              </div >
+              <form id="addappointmentinfo">
+              <ul class="rounded">
+			  <li><label for="user_name">Doctor</label>  <input type="text" name="doctor_name" id="doctor_name"/></li>
+    		  <li><label for="user_name">Patient</label> <input type="text" name="patient_name" id="patient_name"/></li>
+    		  <li><label for="user_name">Start</label>   <input type="text" name="appointment_start" id="appointment_start"/></li>
+    		  <li><label for="user_name">End</label>     <input type="text" name="appointment_end" id="appointment_end"/></li>
+			  </ul>
+			  </form>
+			  <a href="#doaddappointment" class="whiteButton">Add</a>
+          </div>
+      </div>
+  </body>
+</html>
