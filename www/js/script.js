@@ -115,9 +115,13 @@ $(document).ready(function(){
 
 
 $.tzPOST = function(action,data,callback){
+<<<<<<< HEAD
 	   $.post('Action?action='+action,data,callback,'text');
+=======
+	   $.post('http://localhost:8080/Health_management/Action?action='+action,data,callback,'text');
+>>>>>>> ff98f16c2c2fd0c05202b385ded7d0002586a404
 }
 
 $.tzGET = function(action,data,callback){
-	$.get('Action?action='+action,data,callback,'text');
+	$.get('http://www2.comp.polyu.edu.hk:8080/11552402g/Action?action='+action,data,callback,'text');
 }
