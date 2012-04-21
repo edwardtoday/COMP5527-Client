@@ -27,7 +27,6 @@
 	<!-- Scripts for lawnchair storage -->
     <script type="text/javascript" charset="utf-8" src="js/lawnchair/src/Lawnchair.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/lawnchair/src/adapters/indexed-db.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/lawnchair/src/adapters/webkit-sqlite.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/lawnchair/src/adapters/dom.js"></script>
     
     <script type="text/javascript" charset="utf-8" src="js/storage.js"></script>
@@ -83,7 +82,7 @@
                   <li><a id="basicinfo_birthday" href="#">Mar 17, 1988 <small>birthday</small></a></li>
                   <li><a id="basicinfo_gender" href="#">Male <small>gender</small></a></li>
                   <li><a id="basicinfo_marital" href="#">Single <small>marital</small></a></li>
-                  <li><small>Allergies</small><textarea id="allergies" cols=2 placeholder="Textarea"></textarea><li>
+                  <li><small>Allergies</small><p id="allergies" ></p><li>
               </ul>         
               <h2>Records</h2>
               <ul id="patientinfo_records_ul" class="plastic scroll">
@@ -127,13 +126,16 @@
                   <h1 id="appointment_title">Appointment</h1>
                   <a class="back" href="#">Back</a>
               </div>
+               <form id="updateappointmentinfo">
               <ul id="appointment_ul" class="rounded">
 			  <li><label for="user_name">Doctor</label>  <input type="text" name="doctor_name" id="appointment_doctor_name"/></li>
     		  <li><label for="user_name">Patient</label> <input type="text" name="patient_name" id="appointment_patient_name"/></li>
-    		  <li><label for="user_name">Start</label>   <input type="text" name="start" id="appointment_start"/></li>
-    		  <li><label for="user_name">End</label>     <input type="text" name="end" id="appointment_end"/></li>
-			  </ul>
+    		  <li><label for="user_name">Start</label>   <input type="text" name="appointment_start" id="appointment_start"/></li>
+    		  <li><label for="user_name">End</label>     <input type="text" name="appointment_end" id="appointment_end"/> </li>
+    		  <li><input type="hidden" name="patientid" id="patientid"/></li>
+			  </ul></form>
 			  <a href="#doupdateappointment" class="whiteButton">Update</a>
+			  <a href="#dodeleteappointment" class="whiteButton">Delete</a>
 <!-- 			  <div id="appointment_lastupdate" class="info footer">Last updated: YYYY-MM-DD HH:MM:SS</div> -->
           </div>
           <div id="addappointment">
@@ -145,8 +147,8 @@
               <ul class="rounded">
 			  <li><label for="user_name">Doctor</label>  <input type="text" name="doctor_name" id="doctor_name"/></li>
     		  <li><label for="user_name">Patient</label> <input type="text" name="patient_name" id="patient_name"/></li>
-    		  <li><label for="user_name">Start</label>   <input type="text" name="appointment_start" id="appointment_start"/></li>
-    		  <li><label for="user_name">End</label>     <input type="text" name="appointment_end" id="appointment_end"/></li>
+    		  <li><label for="user_name">Start</label>   <input type="text" name="appointment_start" id="start" value="YYYY/MM/DD HH:MM"/></li>
+    		  <li><label for="user_name">End</label>     <input type="text" name="appointment_end" id="end" value="YYYY/MM/DD HH:MM"/></li>
 			  </ul>
 			  </form>
 			  <a href="#doaddappointment" class="whiteButton dissolve" style=>Add</a>
@@ -154,6 +156,18 @@
           <div id="doaddappointment" style="top: 0px; " class="">
                 <div id="addresult "style="font-size: 1.5em; text-align: center; margin: 160px 0 90px; font-family: Marker felt;">
                    add succeed! please go back           
+                </div>
+                <a style="margin-bottom: 120px; color: rgba(0, 0, 0, 0.898438); " href="#" class="whiteButton goback">Go back</a>
+            </div>
+           <div id="doupdateappointment" style="top: 0px; " class="">
+                <div id="addresult "style="font-size: 1.5em; text-align: center; margin: 160px 0 90px; font-family: Marker felt;">
+                   update succeed! please go back           
+                </div>
+                <a style="margin-bottom: 120px; color: rgba(0, 0, 0, 0.898438); " href="#" class="whiteButton goback">Go back</a>
+            </div>
+             <div id="dodeleteappointment" style="top: 0px; " class="">
+                <div id="addresult "style="font-size: 1.5em; text-align: center; margin: 160px 0 90px; font-family: Marker felt;">
+                   Delete succeed! please go back           
                 </div>
                 <a style="margin-bottom: 120px; color: rgba(0, 0, 0, 0.898438); " href="#" class="whiteButton goback">Go back</a>
             </div>
