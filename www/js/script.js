@@ -115,7 +115,7 @@ $(document).ready(function(){
 
 
 $.tzPOST = function(action,data,callback){
-	   $.post('http://localhost:8080/Health_management/Action?action='+action,data,callback,'text');
+	   $.post('http://www2.comp.polyu.edu.hk:8080/11552402g/Action?action='+action,data,callback,'text');
 }
 
 $.tzGET = function(action,data,callback){
